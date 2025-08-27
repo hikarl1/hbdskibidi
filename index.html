@@ -61,14 +61,11 @@
 
     // Click-to-play music and redirect
     btn.addEventListener("click", () => {
-      // Try to play music
-      song.play().catch(err => {
-        alert("Music blocked by browser. Press play manually if needed.");
-      });
-      
-      // Redirect immediately
-      window.location.href = "page.html"; // make sure page.html exists in the same folder
-    });
+  song.play().catch(() => {});
+  window.location.href = "page.html";
+});
+
   </script>
 </body>
 </html>
+
