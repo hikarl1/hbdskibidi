@@ -27,7 +27,20 @@
     document.body.style.background = colors[i];
     i = (i + 1) % colors.length;
   }, 500); // change every 500ms
+    <audio id="bgMusic" src="aboutyou.ogg" loop></audio>
+<button id="playMusic">Play Music</button>
+
+<script>
+  const song = document.getElementById("bgMusic");
+  const playBtn = document.getElementById("playMusic");
+
+  playBtn.addEventListener("click", () => {
+    song.play().catch(() => {});
+  });
+</script>
+
 </script>
 
 </body>
 </html>
+
