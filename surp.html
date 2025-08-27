@@ -53,6 +53,11 @@
 
     setTimeout(() => heart.remove(), 4000);
   }, 800);
+
+   // Redirect to outro.html
+    document.getElementById("goOutro").addEventListener("click", () => {
+      window.location.href = "outro.html"; // make sure outro.html exists in the same folder
+    });
 </script>
 
 <style>
@@ -63,4 +68,5 @@
 </style>
 </body>
 </html>
+
 
