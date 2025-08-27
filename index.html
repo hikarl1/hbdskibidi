@@ -43,10 +43,6 @@
   <audio id="bgMusic" src="aboutyou.ogg" loop></audio>
 
   <script>
-     const btn = document.getElementById("startBtn");
-    btn.addEventListener("click", () => {
-      window.location.href = "page.html"; // go to colorful page where music plays
-    });
     const btn = document.getElementById("startBtn");
     const song = document.getElementById("bgMusic");
 
@@ -63,10 +59,16 @@
       i = (i + 1) % horrorGradients.length;
     }, 1000);
 
-
-
+    // Click-to-play music and redirect
+    btn.addEventListener("click", () => {
+      // Try to play music
+      song.play().catch(err => {
+        alert("Music blocked by browser. Press play manually if needed.");
+      });
+      
+      // Redirect immediately
+      window.location.href = "page.html"; // make sure page.html exists in the same folder
+    });
   </script>
 </body>
 </html>
-
-
